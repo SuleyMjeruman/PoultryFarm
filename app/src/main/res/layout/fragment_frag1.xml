@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="#d3d3d3"
+    android:id="@+id/banda">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="7dp"
+                android:animateLayoutChanges="true">
+
+                <android.support.v7.widget.CardView
+
+                    android:id="@+id/card"
+                    android:layout_margin="3dp"
+                    app:cardBackgroundColor="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="7dp"
+                    app:cardMaxElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/card_selector"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="7dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ufupisho"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="19sp"
+                            android:fontFamily="serif"
+                            app:fontFamily="serif"
+                            android:layout_marginBottom="12dp"/>
+
+                        <View
+                            android:textColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/tabIndicatorColor"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="12dp">
+
+                            <TextView
+                                android:id="@+id/aina"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Miundombinu:"
+                                android:layout_marginBottom="8dp" />
+
+                            <TextView
+                                android:layout_below="@id/aina"
+                                android:id="@+id/dist"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Banda la Kuku:"
+                                android:layout_marginBottom="28dp"/>
+                            <TextView
+                                android:layout_below="@id/dist"
+                                android:id="@+id/affects"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Eneo Bora:"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="28dp"/>
+                            <TextView
+                                android:id="@+id/age"
+                                android:layout_below="@id/affects"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ulinzi wa banda:"/>
+                            <TextView
+                                android:id="@+id/dis"
+                                android:layout_width="wrap_content"
+                                android:layout_toRightOf="@id/aina"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="49dp"
+                                android:layout_marginLeft="49dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Dhana muhimu za ujenzi."/>
+
+                            <TextView
+                                android:id="@+id/com"
+                                android:layout_below="@id/dis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_toRightOf="@id/dist"
+                                android:layout_marginStart="48dp"
+                                android:layout_marginLeft="48dp"
+                                android:text="Jinsi ya kujenga banda bora la kuku." />
+                            <TextView
+                                android:layout_below="@+id/com"
+                                android:id="@+id/bir"
+
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginStart="71dp"
+                                android:layout_marginLeft="71dp"
+                                android:layout_width="wrap_content"
+                                android:layout_toRightOf="@id/affects"
+                                android:layout_height="wrap_content"
+                                android:text="Eneo bora kwaajiri ya ujenzi wa banda."/>
+
+                            <TextView
+                                android:id="@+id/adt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/bir"
+                                android:layout_marginStart="37dp"
+                                android:layout_marginLeft="37dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_toRightOf="@id/age"
+                                android:text="Ulinzi wa banda dhidi ya maadui." />
+
+                            <View
+                                android:id="@+id/line"
+                                android:layout_below="@id/adt"
+                                android:textColor="@color/tabIndicatorColor"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:layout_height="1dp"/>
+
+                            <Button
+                                android:textColor="@color/colorPrimary"
+                                android:id="@+id/btnZaidi"
+                                android:layout_below="@+id/line"
+                                android:onClick="onExpColp"
+                                android:textAllCaps="false"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="wrap_content"
+                                android:text="Soma zaidi..."
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                android:background="@drawable/borderless_btn"
+                                android:typeface="serif"
+                                android:layout_height="wrap_content"
+                                />
+                            <TextView
+                                android:visibility="gone"
+                                android:drawableStart="@drawable/ic_play_arrow_black_24dp"
+                                android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                                android:id="@+id/txtDesc"
+                                android:layout_below="@+id/btnZaidi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/banda_maelezo1"
+
+                                />
+
+
+
+                            <TextView
+                                android:id="@+id/txtDesc2"
+                                android:visibility="gone"
+                                android:drawableStart="@drawable/ic_play_arrow_black_24dp"
+                                android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtDesc"
+                                android:text="@string/eneo"/>
+
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:id="@+id/sifa"
+                                android:layout_below="@id/txtDesc2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <HorizontalScrollView
+                                    android:id="@+id/holScrol"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="69dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+                                        <ImageView
+                                            android:layout_width="130dp"
+                                            android:layout_height="match_parent"
+                                            android:src="@drawable/easy_to_reach"
+                                            android:scaleType="fitXY"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginRight="5dp"/>
+                                        <ImageView
+                                            android:layout_width="130dp"
+                                            android:layout_height="match_parent"
+                                            android:src="@drawable/water"
+                                            android:scaleType="fitXY"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginRight="5dp"/>
+                                        <ImageView
+                                            android:layout_width="130dp"
+                                            android:layout_height="match_parent"
+                                            android:src="@drawable/wind"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginRight="5dp"/>
+
+                                    </LinearLayout>
+
+
+                                </HorizontalScrollView>
+
+
+
+                                <TextView
+                                    android:layout_below="@+id/holScrol"
+                                    android:drawableStart="@drawable/ic_chevron_right_black_24dp"
+                                    android:drawableLeft="@drawable/ic_chevron_right_black_24dp"
+                                    android:layout_marginStart="45dp"
+                                    android:layout_marginLeft="45dp"
+                                    android:id="@+id/sifa_eneo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sifa_eneo"/>
+                                <TextView
+                                    android:drawableStart="@drawable/ic_chevron_right_black_24dp"
+                                    android:drawableLeft="@drawable/ic_chevron_right_black_24dp"
+                                    android:layout_marginStart="45dp"
+                                    android:layout_marginLeft="45dp"
+                                    android:id="@+id/sifa_eneo1"
+                                    android:layout_below="@+id/sifa_eneo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sifa_eneo1"/>
+                                <TextView
+                                    android:drawableStart="@drawable/ic_chevron_right_black_24dp"
+                                    android:drawableLeft="@drawable/ic_chevron_right_black_24dp"
+                                    android:layout_marginStart="45dp"
+                                    android:layout_marginLeft="45dp"
+                                    android:id="@+id/sifa_eneo2"
+                                    android:layout_below="@+id/sifa_eneo1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sifa_eneo2"/>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card2"
+                    android:layout_margin="3dp"
+                    app:cardBackgroundColor="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="7dp"
+                    app:cardMaxElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/card_selector">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sifa"
+                            android:textSize="19sp"
+                            android:textColor="@color/colorPrimary"
+                            app:fontFamily="serif"
+
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/tabIndicatorColor" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sifa_maelezo"/>
+                        <TextView
+                            android:layout_marginBottom="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                            android:drawableStart="@drawable/ic_play_arrow_black_24dp"
+                            android:text="@string/sifa1" />
+                        <TextView
+                            android:layout_marginBottom="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                            android:drawableStart="@drawable/ic_play_arrow_black_24dp"
+                            android:text="@string/sifa2"/>
+                        <TextView
+                            android:layout_marginBottom="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                            android:drawableStart="@drawable/ic_play_arrow_black_24dp"
+                            android:text="@string/sifa3"/>
+                        <TextView
+                            android:layout_marginBottom="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                            android:drawableStart="@drawable/ic_play_arrow_black_24dp"
+                            android:text="@string/sifa4"/>
+                        <TextView
+                            android:layout_marginBottom="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                            android:drawableStart="@drawable/ic_play_arrow_black_24dp"
+                            android:text="@string/sifa5"/>
+                        <TextView
+                            android:layout_marginBottom="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                            android:drawableStart="@drawable/ic_play_arrow_black_24dp"
+                            android:text="@string/sifa6"/>
+
+
+                        <Button
+                            android:onClick="OpenPlayBandaActivity"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:id="@+id/btnPlay"
+                            android:background="@drawable/tizama_rudi_back"
+                            android:textColor="#fff"
+                            android:text="Tizama Video"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

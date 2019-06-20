@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ictmcd.poultrykuku">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".vyakula"></activity>
+        <activity android:name=".calculator" />
+        <activity android:name=".kupima_na_kuchanganya_chakula" />
+        <activity android:name=".Faida_za_vyakula_vya_kuku" />
+        <activity android:name=".Vyakula_vya_kuku_video" />
+        <activity android:name=".MiundombinuObjective" />
+        <activity android:name=".MagonjwaObjective" />
+        <activity
+            android:name=".Chakula"
+            android:parentActivityName=".ObjectiveLishe" />
+        <activity android:name=".ObjectiveLishe" />
+        <activity
+            android:name=".protozoa"
+            android:parentActivityName=".Magonjwa" />
+        <activity
+            android:name=".virusi"
+            android:parentActivityName=".Magonjwa" />
+        <activity
+            android:name=".bacteria"
+            android:parentActivityName=".Magonjwa" />
+        <activity
+            android:name=".Magonjwa"
+            android:parentActivityName=".dashboard" />
+        <activity
+            android:name=".splash_screen"
+            android:theme="@style/NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".breedtype" />
+        <activity android:name=".ainakuku_objective" />
+        <activity android:name=".ainaKuku_video" />
+        <activity
+            android:name=".dashboard"
+            android:theme="@style/NoActionBar2" />
+        <activity
+            android:name=".PlayVideoBanda"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".dashboard"
+            android:theme="@style/NoActionBar2" />
+    </application>
+
+</manifest>

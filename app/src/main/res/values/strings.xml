@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">Poultry Kuku</string>
+    <string name="tab_text_1">BANDA</string>
+    <string name="tab_text_2">VIFAA</string>
+    <string name="tab_text_3">GHARAMA</string>
+
+    <string name="banda_la_kuku">Banda la kuku</string>
+    <string name="banda_maelezo1">Ni muhimu kuwajengea kuku banda bora ili wapate kujikinga na mvua, baridi, wezi pamoja na wanyama wakali.</string>
+    <string name="banda_maelezo2"> Banda la kuku linaweza likajengwa kando au nyuma ya nyumba ya kuishi. </string>
+    <string name="banda_maelezo3">Eneo linapojengwa banda la kuku pawe: </string>
+    <string name="eneo_liwe1">Panafikika kwa urahisi. </string>
+    <string name="eneo_liwe2">Pasituamishe maji </string>
+    <string name="eneo_liwe4">Pasiwe pa mwelekeo wa upepo mkali </string>
+
+    <string name="ufupisho">Ufupisho</string>
+    <string name="sifa">Sifa za banda bora la Kuku</string>
+    <string name="sifa_maelezo">Ukiamua kufuga katika banda
+        kwa njia mbili zilizoelezwa awali utatakiwa kujenga banda
+        lenye sifa zitakazokidhi mahitaji ya msingi ya kuku.
+        Banda bora la kuku linatakiwa kuwa kama ifuatavyo:</string>
+    <string name="eneo"> Banda la kuku linaweza likajengwa kando au nyuma ya nyumba ya kuishi. Eneo linapojengwa banda la kuku pawe: </string>
+    <string name="sifa_eneo">Panafikika kwa urahisi. </string>
+    <string name="sifa_eneo1">Pasituamishe maji. </string>
+    <string name="sifa_eneo2">Pasiwe pa mwelekeo wa upepo mkali</string>
+
+    <string name="sifa1">Liwe na paa imara lisilovuja.</string>
+    <string name="sifa2">Kuta zisiwe na nyufa kama umetumia tofali (zisilibwe au zipigwe lipu) kwani nyufa ni maficho ya wadudu kama viroboto, utitiri, chawa nk.</string>
+    <string name="sifa3">Sakafu isiwe na nyufa au mipasuko.</string>
+    <string name="sifa4">Liwe na madirisha ya kutosha kupitisha hewa.</string>
+    <string name="sifa5">Liwe na uwezo wa kuingia mtu wa kufanya usafi na huduma nyingine muhimu.</string>
+    <string name="sifa6">Liwe na ukubwa (nafasi) unaolingana na idadi ya wastani wa kuku 10 mpaka 15 kwa mita moja mraba kwa kuku wanaofugwa huria, ili wawe na nafasi ya kulala tu wakati wa usiku. Ila kwa kuku wanaofugwa kwa mfumo wa nusu ndani nusu nje wanastahili eneo la mita moja mraba kwa kuku 4 hadi wa 5 ili kuruhusu nafasi ya vyombo vya chakula na maji</string>
+
+
+    <string name="title_activity_breedtype">breedtype</string>
+    <string name="kienyeji">Kienyeji</string>
+    <string name="kisasa">Kisasa</string>
+
+    //sifa za kuku wa kienyeji
+    <string name="sifaKienyeji">Sifa za Kuku wa Kienyeji</string>
+    <string name="sifa1Kienyeji"> Wana uwezo wa kujitafutia chakula wenyewe</string>
+    <string name="sifa2Kienyeji"> Wana uwezo wa kuatamia mayai,kutotoa na kulea vifaranga</string>
+    <string name="sifa3Kienyeji"> Wastahamilivu wa magonjwa lakini ni vizuri kuwakinga</string>
+    <string name="sifa4Kienyeji"> Ladha ya nyama yake ni nzuri ukilinganisha na ile ya kisasa</string>
+    //mapungufu ya kuku wa kienyeji
+    <string name="mapungufuKienyeji">Mapungufu ya kuku wa kienyeji</string>
+    <string name="mapungufu1Kienyeji"> Hutaga mayai madogo wastani wa gramu 47</string>
+    <string name="mapungufu2Kienyeji"> Hukua taratibu</string>
+    <string name="mapungufu3Kienyeji"> Nyama yake ni ngumu hivyo huchukua muda mrefu kuiva</string>
+    //Faida za ufugaji wa kuku wa kienyeji
+    <string name="faidaKienyeji">Faida za ufugaji wa kuku wa kienyeji</string>
+    <string name="faida1Kienyeji">Hutumika kwa chakula</string>
+    <string name="faida2Kienyeji"> Chanzo cha kipato kwa mfugaji</string>
+    <string name="faida3Kienyeji"> Gharama nafuu za ufugaji</string>
+    <string name="faida4Kienyeji"> Kinyesi chao ni mbolea</string>
+    //Changamoto za ufugaji wa kuku wa kienyeji
+    <string name="changamotoKienyeji">Changamoto za ufugaji wa kuku wa kienyeji</string>
+    <string name="changamoto1Kienyeji"> Ukosefu wa mabanda bora</string>
+    <string name="changamoto2Kienyeji"> Wezi, wanyama na ndege hushambulia kuku</string>
+    <string name="changamoto3Kienyeji"> Upatikanaji haba wa chanjo za magonjwa</string>
+
+
+    //sifa za kuku wa kisasa
+    <string name="sifaKisasa">sifa za kuku wa kisasa</string>
+    <string name="sifa1Kisasa"> Hutaga mayai mengi na yenye uzito mkubwa</string>
+    <string name="sifa2Kisasa"> Hukua haraka ukilinganisha na kuku wa kienyeji</string>
+    <string name="sifa3Kisasa"> Nyama yake ni laini hivyo huchukua muda mfupi kuiva</string>
+    //mapungufu ya kuku wa kienyeji
+    <string name="mapungufuKisasa">Mapungufu ya kuku wa kisasa</string>
+    <string name="mapungufu1Kisasa"> Hawawezi kujitafutia chakula wenyewe</string>
+    <string name="mapungufu2Kisasa"> Hawawezi kuatamia mayai,kutotoa na kulea vifaranga</string>
+    <string name="mapungufu3Kisasa"> Wana uwezo mdogo wa kustahamili magonjwa</string>
+    <string name="mapungufu4Kisasa"> Ladha ya nyama yake sio nzuri ukilinganisha na ile ya kienyeji</string>
+    //Faida za ufugaji wa kuku wa kisasa
+    <string name="faidaKisasa">Faida za ufugaji wa kuku wa kisasa</string>
+    <string name="faida1Kisasa"> Hutumika kwa chakula</string>
+    <string name="faida2Kisasa"> Chanzo cha kipato kwa mfugaji</string>
+    <string name="faida3Kisasa"> Kinyesi chao ni mbolea</string>
+    //Changamoto za ufugaji wa kuku wa kisasa
+    <string name="changamotoKisasa">Changamoto za ufugaji wa kuku wa kisasa</string>
+    <string name="changamoto1Kisasa"> Huitaji matunzo ya hali ya juu ili wasishambuliwe na magonjwa</string>
+    <string name="changamoto2Kisasa"> Gharama kubwa za ufugaji</string>
+    <string name="changamoto3Kisasa"> Wezi, wanyama na ndege hushambulia kuku</string>
+    <string name="changamoto4Kisasa"> Ukosefu wa mabanda bora</string>
+    <string name="changamoto5Kisasa"> Upatikanaji haba wa chanjo za magonjwa</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bacteria">Kuku kama wanyama wengine hushambuliwa na magonjwa mbalimbali ambayo yanayosababishwa na bacteria mbalimbali, katika sehemu hii tutakuelezea magonjwa hayo na dalili zake, kinga zake pamoja na matibabu.</string>
+    <string name="virusi">Virusi ni chembe ndogo sana iliyoundwa na mada jenetiki,katika bahasha ya proteini, hapa tutaangaza magonjwa mbalimbali yanasobabishwa na virus kwenye mwili wa kuku na dalili zake, kinga zake pamoja na matibabu.</string>
+    <string name="protozoa">Protozoa ni aina ya viumbe hai au parasite ambao husababisha magonjwa mbalimbali kwenye mwili wa kuku na pia hata kwa wanyama wengine, hapa tutachambua magonjwa hayo na dalili zake, kinga zake pamoja na matibabu.</string>
+
+    <string name="kilogramInteger">%1$d kg</string>
+    <string name="kilogramDouble">%.1f kg</string>
+
+
+</resources>
