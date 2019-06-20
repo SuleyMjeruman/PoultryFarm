@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layoutback"
+    tools:context=".PhoneVerification"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layoutback"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="19dp"
+                    android:text="Hatua ya Uhakikisho"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:fontFamily="serif" />
+
+                <TextView
+                    android:id="@+id/maelekezo"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="19dp"
+                    android:text="@string/ombaMsimbo"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    app:fontFamily="serif" />
+
+                <TextView
+                    android:id="@+id/maelekezo2"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="19dp"
+                    android:text="@string/verification"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    app:fontFamily="serif" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="49dp"
+                    android:text="Tafadhali Ingiza msimbo wa uthibitisho uliotumwa kwako na bofya kuthibitisha"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    app:fontFamily="serif" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:layout_gravity="center">
+
+                    <Spinner
+                        android:id="@+id/countryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+                    <EditText
+                        android:id="@+id/namba"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="19dp"
+                        android:hint="Namba ya simu"
+                        android:inputType="phone"
+                        android:textColor="#fff"
+                        android:textColorHint="#B4A6A6" />
+                </GridLayout>
+
+                <EditText
+                    android:id="@+id/codeInput"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="19dp"
+                    android:gravity="center"
+                    android:maxLength="6"
+                    android:hint="Msimbo"
+                    android:inputType="number"
+                    android:textColor="#fff"
+                    android:textColorHint="#B4A6A6" />
+
+                <Button
+                    android:id="@+id/verify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/disabled"
+                    android:text="kuthibitisha"
+                    android:textColor="#fff"
+                    android:textStyle="italic"
+                    app:fontFamily="serif"
+                    android:enabled="false"/>
+
+                <Button
+                    android:id="@+id/requestCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/register_back"
+                    android:text="Omba msimbo"
+                    android:textColor="#fff"
+                    android:textStyle="italic"
+                    app:fontFamily="serif"
+                    android:layout_marginBottom="19dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

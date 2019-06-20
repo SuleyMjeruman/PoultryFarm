@@ -56,4 +56,8 @@ public class dashboard extends AppCompatActivity {
     public void openCalculator(View view){
         startActivity(new Intent(dashboard.this,calculator.class));
     }
+
+    public void openPhoneVerification(View view){
+        startActivity(new Intent(dashboard.this,PhoneVerification.class));
+    }
 }
