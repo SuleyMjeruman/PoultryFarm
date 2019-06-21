@@ -97,6 +97,30 @@
 
     <string name="verification">Nambari ya uthibitisho itatumwa kwa nambari yako ya simu iliyotolewa na viwango vya kawaida vinatumika.</string>
     <string name="ombaMsimbo">Chagua code namba ya nchi yako mfano +255 kwa Tanzania kisha weka nambari yako ya simu bila 0 ya kwanza alafu bofya kitufe kilichoandikwa OMBA MSIMBO.</string>
-    <string name="title_activity_record_dashboard">RecordDashboard</string>
+    <string name="title_activity_record_dashboard">Simamia Kumbukubu</string>
+
+    <string name="egg">Kihesabu Mayai</string>
+    <string name="mauzo">Mauzo</string>
+    <string name="idadi">Idadi ya kuku</string>
+    <string name="mabanda">Mabanda</string>
+    <string name="matumizi">Matumizi</string>
+    <string name="chanjo">Chanjo</string>
+    <string name="report">Repoti</string>
+    <string name="chakula">Chakula</string>
+    <string name="madawa">Madawa</string>
+
+
+    <string name="eggDesc">Tunza kumbukumbu za mayai yanayotagwa kila siku.</string>
+    <string name="mauzoDesc">Tunza taarifa juu ya mauzo ya mayai na kuku.</string>
+    <string name="idadiDesc">Hifadhi idadi ya kuku kwa kila banda.</string>
+    <string name="mabandaDesc">Tunza taarifa ya mabanda ambayo yanatumika kufugia kuku.</string>
+    <string name="matumiziDesc">Tunza kumbukumbu za kila siku juu ya matumizi unayoyafanya.</string>
+    <string name="chanjoDesc">Tunza taarifa za chanjo za kuku.</string>
+    <string name="reportDesc">Njia rahisi ya kupata repoti ya wiki au mwezi juu ya biashara yako ya kuku.</string>
+    <string name="chakulaDesc">Tunza taarifa za vyakula unavyowapa kuku wako.</string>
+    <string name="madawaDesc">Tunza taarifa za madawa unayowapatia kuku wako.</string>
+    <string name="taarifaMabanda">Taarifa za mabanda zitatokea hapa mara tu baada ya kusajili banda. Bonyeza kitufe chenye alama ya jumlisha kuweka taarifa za awali la banda lako.</string>
+    <string name="title_activity_kamilisha_usajili">KamilishaUsajili</string>
+    <string name="jisajili">Karibu kwenye sehemu hii muhimu ya kutunza taarifaza biashara yako ya kuku. Jaza taarifa muhimu kuhusu wewe kama inavyo jionesha hapo chini, kisha bonyeza jisajili.</string>
 
 </resources>

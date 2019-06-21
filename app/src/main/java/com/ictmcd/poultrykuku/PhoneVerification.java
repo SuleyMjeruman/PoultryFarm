@@ -2,6 +2,7 @@ package com.ictmcd.poultrykuku;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.concurrent.TimeUnit;
 
@@ -36,6 +42,8 @@ public class PhoneVerification extends AppCompatActivity {
     TextView textViewStatus, maelekezo, maelekezo2;
     private FirebaseAuth mAuth;
     ProgressDialog progressDialog;
+    private DatabaseReference myRef;
+    private String CurrentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +52,8 @@ public class PhoneVerification extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
+        CurrentUser = mAuth.getCurrentUser().getUid().toString();
+        myRef = FirebaseDatabase.getInstance().getReference("users");
 
         spinner = findViewById(R.id.countryCode);
         String[] countriesCode = {"+255", "+254", "+256", "+250", "+257"};
@@ -109,11 +119,63 @@ public class PhoneVerification extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-            Intent intent = new Intent(PhoneVerification.this, RecordDashboard.class);
-            startActivity(intent);
-            finish();
+
+        try {
+
+            if (mAuth.getCurrentUser() != null) {
+
+                finish();
+                final DatabaseReference Ref = FirebaseDatabase.getInstance().getReference("users");
+
+                Ref.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.hasChildren()) {
+                            Ref.child(CurrentUser).addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                    if (dataSnapshot.exists()) {
+                                        if (dataSnapshot.hasChild("fname") && dataSnapshot.hasChild("lname") &&
+                                                dataSnapshot.hasChild("area") && dataSnapshot.hasChild("age") && dataSnapshot.hasChild("dob")) {
+
+                                            Intent intent = new Intent(PhoneVerification.this, RecordDashboard.class);
+                                            startActivity(intent);
+                                            finish();
+                                        } else if (!dataSnapshot.hasChild("fname") && !dataSnapshot.hasChild("lname") &&
+                                                !dataSnapshot.hasChild("area") && !dataSnapshot.hasChild("age") && !dataSnapshot.hasChild("dob")) {
+
+                                            Intent intent = new Intent(PhoneVerification.this, KamilishaUsajili.class);
+                                            intent.putExtra("userID", CurrentUser);
+                                            startActivity(intent);
+                                            finish();
+
+                                        }
+                                    }
+
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                }
+                            });
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+
+        } catch (Exception e) {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+
+
     }
 
     private void verifyCode(String code) {
@@ -129,18 +191,71 @@ public class PhoneVerification extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()) {
-
                             progressDialog.dismiss();
-                            Intent intent = new Intent(PhoneVerification.this, RecordDashboard.class);
-                            startActivity(intent);
-                            finish();
+
+                            myRef.child(CurrentUser).setValue("").addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        final DatabaseReference ref = FirebaseDatabase.getInstance().getReference("users");
+
+                                        ref.addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                                if (dataSnapshot.hasChild(CurrentUser)) {
+                                                    ref.child(CurrentUser).addValueEventListener(new ValueEventListener() {
+                                                        @Override
+                                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                                            if (!dataSnapshot.hasChild("fname") && !dataSnapshot.hasChild("lname") &&
+                                                                    !dataSnapshot.hasChild("area") && !dataSnapshot.hasChild("age") && !dataSnapshot.hasChild("dob")) {
+
+                                                                Intent intent = new Intent(PhoneVerification.this, KamilishaUsajili.class);
+                                                                intent.putExtra("userID", CurrentUser);
+                                                                startActivity(intent);
+                                                                finish();
+
+                                                            } else if (dataSnapshot.hasChild("fname") && dataSnapshot.hasChild("lname") &&
+                                                                    dataSnapshot.hasChild("area") && dataSnapshot.hasChild("age") && dataSnapshot.hasChild("dob")) {
+                                                                Intent intent = new Intent(PhoneVerification.this, RecordDashboard.class);
+                                                                intent.putExtra("userID", CurrentUser);
+                                                                startActivity(intent);
+                                                                finish();
+                                                            }
+
+                                                        }
+
+                                                        @Override
+                                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                                        }
+                                                    });
+                                                }
+
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                            }
+                                        });
+
+
+                                    } else {
+                                        String error = task.getException().toString();
+                                        Toast.makeText(PhoneVerification.this, error, Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+
                         } else {
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                                 AlertDialog.Builder AB = new AlertDialog.Builder(PhoneVerification.this);
                                 AB.setCancelable(true);
                                 AB.setMessage(task.getException().getMessage());
                                 AlertDialog alertDialog = AB.create();
-                                alertDialog.setTitle("Msimbo uliouweka haupo au sio shahihi.");
+                                alertDialog.setTitle("Msimbo uliouweka haupo au sio sahihi.");
                                 alertDialog.show();
                                 progressDialog.dismiss();
                             }

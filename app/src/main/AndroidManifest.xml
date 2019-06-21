@@ -12,9 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".KamilishaUsajili"
+            android:label="@string/title_activity_kamilisha_usajili"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Mabanda"
+            android:parentActivityName=".RecordDashboard" />
+        <activity
             android:name=".RecordDashboard"
             android:label="@string/title_activity_record_dashboard"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PhoneVerification" />
         <activity android:name=".vyakula" />
         <activity android:name=".calculator" />
