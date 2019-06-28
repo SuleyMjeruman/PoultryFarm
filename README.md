@@ -1,6 +1,6 @@
 # PoultryFarm
 Poultry Farm is android application which help farmers to get in touch with latest farming news and tips! 
-It also help farmers to keep their records of daily sells of eggs or shicken as well as daily and many more, keep information about vaccination for each month
+It also help farmers to keep their records of daily sells of eggs or chicken as well as daily and many more, keep information about vaccination for each month
 providing automated report for all the data that has been stored by the farmer.
 
 This project was developed by Third year Students at University Of Dodoma as their Final year project 2019 BSC ICT-MCD
